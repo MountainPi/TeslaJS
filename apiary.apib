@@ -3,7 +3,7 @@ HOST: https://owner-api.teslamotors.com
 
 # TeslaJS Mock Model S JSON API
 
-This is unofficial documentation of the Tesla Model S JSON API used by the iOS and Android apps. 
+This is unofficial documentation of the Tesla Model S JSON API used by the iOS and Android apps.
 Its primary purpose is to enable testing the TeslaJS node library.
 
 # Group Authentication
@@ -31,7 +31,7 @@ The current client ID and secret are [available here](http://pastebin.com/fX6ejA
 + Response 200 (application/json)
 
     + Body
-    
+
             {
               "access_token": "abc123",
               "token_type": "bearer",
@@ -39,7 +39,7 @@ The current client ID and secret are [available here](http://pastebin.com/fX6ejA
               "created_at": 1457385291,
               "refresh_token" : "cba321"
             }
-            
+
 ## Logout [/oauth/revoke]
 
 ### Revoke an Access Token [POST]
@@ -55,7 +55,7 @@ Revoke an access token
 + Response 200 (application/json)
 
     + Body
-    
+
             {
                 "response": true
             }
@@ -79,7 +79,7 @@ Retrieve a list of your owned vehicles (includes vehicles not yet shipped!)
 + Response 200 (application/json)
 
     + Body
-    
+
             {
               "response": [{
                 "color": null,
@@ -120,7 +120,7 @@ Determines if mobile access to the vehicle is enabled.
 + Response 200 (application/json)
 
     + Body
-    
+
             {
                 "response": true
             }
@@ -144,7 +144,7 @@ Currently, this has the exact same response structure as the newer vehicle_data 
 + Response 200 (application/json)
 
     + Body
-    
+
             {
                 "response": {
                     "color": null,
@@ -241,7 +241,7 @@ instead of individual calls as it lowers overall load on Tesla servers.
 + Response 200 (application/json)
 
     + Body
-    
+
             {
                 "response": {
                     "color": null,
@@ -336,7 +336,7 @@ Returns the state of charge in the battery.
 + Response 200 (application/json)
 
     + Body
-    
+
             {
               "response": {
                 "charging_state": "Complete",
@@ -381,7 +381,7 @@ Returns the current temperature and climate control state.
 + Response 200 (application/json)
 
     + Body
-    
+
             {
               "response": {
                 "inside_temp": 17.0,
@@ -412,7 +412,7 @@ Returns the driving and position state of the vehicle.
 + Response 200 (application/json)
 
     + Body
-    
+
             {
               "response": {
                 "shift_state": null,
@@ -441,7 +441,7 @@ Returns various information about the GUI settings of the car, such as unit form
 + Response 200 (application/json)
 
     + Body
-    
+
             {
               "response": {
                 "gui_distance_units": "mi/hr",
@@ -469,7 +469,7 @@ Returns the vehicle's physical state, such as which doors are open.
 + Response 200 (application/json)
 
     + Body
-    
+
             {
               "response": {
                 "df": false,
@@ -508,7 +508,7 @@ Returns the vehicle's configuration details.
 + Response 200 (application/json)
 
     + Body
-    
+
             {
               "response": {
                 "car_special_type":"base",
@@ -532,7 +532,7 @@ Returns the vehicle's configuration details.
                 "wheel_type":"Base19"
               }
             }
-            
+
 # Group Vehicle Commands
 
 These commands alter the vehicles state, and return result (true/false) to indicate success, and if failure reason contains the cause of failure.
@@ -554,7 +554,7 @@ Wakes up the car from the sleep state. Necessary to get some data from the car.
 + Response 200 (application/json)
 
     + Body
-    
+
             {
               "response": {
                 "result": true,
@@ -580,7 +580,7 @@ Schedules the car to install a pending firmware Update
 + Response 200 (application/json)
 
     + Body
-    
+
             {
                 "response": {
                 "result": true,
@@ -605,7 +605,7 @@ Cancels a pending firmware Update
 + Response 200 (application/json)
 
     + Body
-    
+
             {
                 "response": {
                 "result": true,
@@ -630,7 +630,7 @@ Toggles media playback
 + Response 200 (application/json)
 
     + Body
-    
+
             {
                 "response": {
                 "result": true,
@@ -655,7 +655,7 @@ Play the next track
 + Response 200 (application/json)
 
     + Body
-    
+
             {
                 "response": {
                 "result": true,
@@ -680,7 +680,7 @@ Play the previous track
 + Response 200 (application/json)
 
     + Body
-    
+
             {
                 "response": {
                 "result": true,
@@ -705,7 +705,7 @@ Play the next favorite
 + Response 200 (application/json)
 
     + Body
-    
+
             {
                 "response": {
                 "result": true,
@@ -730,7 +730,7 @@ Play the previous favorite
 + Response 200 (application/json)
 
     + Body
-    
+
             {
                 "response": {
                 "result": true,
@@ -755,7 +755,7 @@ Increase media volume
 + Response 200 (application/json)
 
     + Body
-    
+
             {
                 "response": {
                 "result": true,
@@ -780,7 +780,7 @@ Decrease media volume
 + Response 200 (application/json)
 
     + Body
-    
+
             {
                 "response": {
                 "result": true,
@@ -806,7 +806,7 @@ Activate speed limitation
 + Response 200 (application/json)
 
     + Body
-    
+
             {
                 "response": {
                 "result": true,
@@ -832,7 +832,7 @@ Deactivate speed limitation
 + Response 200 (application/json)
 
     + Body
-    
+
             {
                 "response": {
                 "result": true,
@@ -858,7 +858,7 @@ Clear speed limitation pin
 + Response 200 (application/json)
 
     + Body
-    
+
             {
                 "response": {
                 "result": true,
@@ -884,7 +884,7 @@ Set speed limit
 + Response 200 (application/json)
 
     + Body
-    
+
             {
                 "response": {
                 "result": true,
@@ -910,7 +910,7 @@ Enable or disable sentry mode.
 + Response 200 (application/json)
 
     + Body
-    
+
             {
                 "response": {
                 "result": true,
@@ -935,7 +935,7 @@ Return a list of nearby Destination and Superchargers
 + Response 200 (application/json)
 
     + Body
-    
+
             {
                 "response": {
                     "congestion_sync_time_utc_secs": 1547415712,
@@ -967,7 +967,7 @@ Adjust seat heater levels
 + Response 200 (application/json)
 
     + Body
-    
+
             {
                 "response": {
                 "result": true,
@@ -993,14 +993,14 @@ Control the windows
 + Response 200 (application/json)
 
     + Body
-    
+
             {
                 "response": {
                 "result": true,
                 "reason": ""
               }
             }
-      
+
 ## Max Defrost request [POST /api/1/vehicles/{vehicle_id}/command/set_preconditioning_max?command={command}]
 
 Toggles the climate controls between Max Defrost and the previous setting
@@ -1019,7 +1019,7 @@ Toggles the climate controls between Max Defrost and the previous setting
 + Response 200 (application/json)
 
     + Body
-    
+
             {
                 "response": {
                 "result": true,
@@ -1045,7 +1045,7 @@ Adjust steering heater levels
 + Response 200 (application/json)
 
     + Body
-    
+
             {
                 "response": {
                 "result": true,
@@ -1073,7 +1073,7 @@ Sends a navigation request to the car
 + Response 200 (application/json)
 
     + Body
-    
+
             {
                 "response": {
                 "result": true,
@@ -1108,7 +1108,7 @@ locations in navigation.
 + Response 200 (application/json)
 
     + Body
-    
+
             {
                 "response": {
                 "result": true,
@@ -1133,7 +1133,7 @@ Resets the PIN set for valet mode, if set.
 + Response 200 (application/json)
 
     + Body
-    
+
             {
               "response": {
                 "result": true,
@@ -1158,7 +1158,7 @@ Opens the charge port.
 + Response 200 (application/json)
 
     + Body
-    
+
             {
               "response": {
                 "result": true,
@@ -1183,7 +1183,7 @@ Closes the charge port.
 + Response 200 (application/json)
 
     + Body
-    
+
             {
               "response": {
                 "result": true,
@@ -1207,7 +1207,7 @@ Set the charge mode to standard (90% under the new percentage system introduced 
 + Response 200 (application/json)
 
     + Body
-    
+
             {
               "response": {
                 "result": true,
@@ -1232,7 +1232,7 @@ Set the charge mode to max range (100% under the new percentage system introduce
 + Response 200 (application/json)
 
     + Body
-    
+
             {
               "response": {
                 "result": true,
@@ -1258,7 +1258,7 @@ Set the charge limit to a custom percentage.
 + Response 200 (application/json)
 
     + Body
-    
+
             {
               "response": {
                 "result": true,
@@ -1283,7 +1283,7 @@ Start charging. Must be plugged in, have power available, and not have reached y
 + Response 200 (application/json)
 
     + Body
-    
+
             {
               "response": {
                 "result": true,
@@ -1308,7 +1308,7 @@ Stop charging. Must already be charging.
 + Response 200 (application/json)
 
     + Body
-    
+
             {
               "response": {
                 "result": true,
@@ -1333,7 +1333,7 @@ Flash the lights once.
 + Response 200 (application/json)
 
     + Body
-    
+
             {
               "response": {
                 "result": true,
@@ -1358,7 +1358,7 @@ Honk the horn once.
 + Response 200 (application/json)
 
     + Body
-    
+
             {
               "response": {
                 "result": true,
@@ -1383,7 +1383,7 @@ Unlock the car's doors.
 + Response 200 (application/json)
 
     + Body
-    
+
             {
               "response": {
                 "result": true,
@@ -1408,7 +1408,7 @@ Lock the car's doors.
 + Response 200 (application/json)
 
     + Body
-    
+
             {
               "response": {
                 "result": true,
@@ -1435,7 +1435,7 @@ Set the temperature target for the HVAC system.
 + Response 200 (application/json)
 
     + Body
-    
+
             {
               "response": {
                 "result": true,
@@ -1460,7 +1460,7 @@ Start the climate control system. Will cool or heat automatically, depending on 
 + Response 200 (application/json)
 
     + Body
-    
+
             {
               "response": {
                 "result": true,
@@ -1485,7 +1485,7 @@ Stop the climate control system.
 + Response 200 (application/json)
 
     + Body
-    
+
             {
               "response": {
                 "result": true,
@@ -1519,7 +1519,7 @@ Controls the car's panoramic roof, if installed.
 + Response 200 (application/json)
 
     + Body
-    
+
             {
               "response": {
                 "result": true,
@@ -1545,7 +1545,7 @@ Start the car for keyless driving. Must start driving within 2 minutes of issuin
 + Response 200 (application/json)
 
     + Body
-    
+
             {
               "response": {
                 "result": true,
@@ -1571,7 +1571,7 @@ Open the trunk or frunk. Currently inoperable.
 + Response 200 (application/json)
 
     + Body
-    
+
             {
               "response": {
                 "result": true,
@@ -1599,7 +1599,7 @@ Trigger homelink.
 + Response 200 (application/json)
 
     + Body
-    
+
             {
               "response": {
                 "result": true,
@@ -1620,7 +1620,7 @@ Update calendar.
 + Response 200 (application/json)
 
     + Body
-    
+
             {
               "response": {
                 "result": true,
@@ -1628,7 +1628,7 @@ Update calendar.
               }
             }
 
-            
+
 ## Bad Get [GET /api/1/vehicles/{vehicle_id}/data_request/err_get]
 
 This is a GET that is guaranteed to fail.
@@ -1642,9 +1642,9 @@ This is a GET that is guaranteed to fail.
 + Response 400 (text/xml)
 
     + Body
-    
+
             <HTML><HEAD></HEAD><BODY>Unknown Request</BODY></HEAD></HTML>
-            
+
 ## Bad Post [POST /api/1/vehicles/{vehicle_id}/command/err_post]
 
 This is a POST that is guaranteed to fail.
@@ -1662,7 +1662,7 @@ This is a POST that is guaranteed to fail.
 + Response 400 (text/xml)
 
     + Body
-    
+
             <HTML><HEAD></HEAD><BODY>Unknown Request</BODY></HEAD></HTML>
 
 ## Streaming [GET /{vehicle_id}/?values=elevation,est_heading,est_lat,est_lng,est_range,heading,odometer,power,range,shift_state,speed,soc]
@@ -1682,7 +1682,33 @@ This models the streaming API interface.
 + Response 200 (application/json)
 
     + Body
-    
+
             {
-                "result": "['elevation', 'est_heading', 'est_lat', 'est_lng', 'est_range', 'heading', 'odometer', 'power', 'range', 'shift_state', 'speed', 'soc']"            
+                "result": "['elevation', 'est_heading', 'est_lat', 'est_lng', 'est_range', 'heading', 'odometer', 'power', 'range', 'shift_state', 'speed', 'soc']"
+            }
+
+## Get Current Solar Usage [GET /api/1/energy_sites/{site_id}/live_status]
+
+Get solar live status.
+
++ Request
+
+    + Headers
+
+            Authorization: Bearer {access_token}
+
++ Parameters
+
+    + site_id: `1` (number) - The id of the Vehicle.
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+              "response": {
+                "solar_power": 1000,
+                "load_power": 750,
+                "grid_power": 250
+              }
             }
